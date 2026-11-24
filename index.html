@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#1d2b23"><link rel="apple-touch-icon" href="apple-touch-icon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Pawframe Studio</title><link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app-shell">
+<aside class="sidebar" id="sidebar">
+  <div class="brand"><img class="brand-logo" src="logo.png" alt="Pawframe Tierfotografie Logo"></div>
+  <div class="nav-label">ARBEITSBEREICH</div>
+  <nav id="nav">
+    <button class="nav-item active" data-page="leads"><span>◈</span> Akquise <b id="leadCount">0</b></button>
+    <button class="nav-item" data-page="private"><span>♙</span> Privatkunden <b id="privateCount">0</b></button>
+    <button class="nav-item" data-page="business"><span>▣</span> Geschäftskunden <b id="businessCount">0</b></button>
+    <div class="nav-label sublabel">VERWALTUNG</div>
+    <button class="nav-item" data-page="documents"><span>▤</span> Dokumente</button>
+    <button class="nav-item" data-page="tariffs"><span>◇</span> Tarife</button>
+    <button class="nav-item" data-page="analytics"><span>▥</span> Berechnungen</button>
+  </nav>
+  <div class="sidebar-bottom"><div class="local-status"><i></i><span><strong>Lokaler Speicher</strong><small>Deine Daten bleiben auf diesem Gerät</small></span></div><button class="backup-link" id="exportBtn">↓ Daten sichern</button><button class="backup-link" id="importBtn">↑ Sicherung wiederherstellen</button><input id="importFile" type="file" accept="application/json" hidden></div>
+</aside>
+<main class="main">
+<header class="topbar"><button class="mobile-menu" id="menuBtn">☰</button><div><div class="eyebrow">PAWFRAME STUDIO</div><div class="page-heading" id="pageHeading">Akquise</div></div><div class="top-actions"><span class="today" id="today"></span><button class="primary-btn" id="addTop">＋ Neuer Eintrag</button></div></header>
+<section class="content" id="content"></section>
+<footer>PAWFRAME STUDIO <span>·</span> Offline-Verwaltung <span class="footer-right">Version 1.0</span></footer>
+</main>
+</div>
+<div class="modal-backdrop" id="modalBackdrop" hidden><section class="modal" role="dialog" aria-modal="true"><div class="modal-head"><div><div class="eyebrow">PAWFRAME STUDIO</div><h2 id="modalTitle">Neuer Eintrag</h2></div><button class="icon-btn" id="closeModal">✕</button></div><div id="modalBody"></div></section></div>
+<div class="toast" id="toast" role="status"></div>
+<script src="app.js"></script>
+</body></html>
